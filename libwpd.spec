@@ -29,7 +29,7 @@ Biblioteka obs³uguj±ca dokumenty WordPerfecta.
 Summary:	Header files for libwpd library
 Summary(pl):	Pliki nag³ówkowe biblioteki libwpd
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 2.0.0
 Requires:	libgsf-devel >= 1.6.0
 Requires:	libstdc++-devel
@@ -44,7 +44,7 @@ Pliki nag³ówkowe biblioteki libwpd.
 Summary:	Static libwpd library
 Summary(pl):	Statyczna biblioteka libwpd
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libwpd library.
@@ -56,7 +56,7 @@ Statyczna biblioteka libwpd.
 Summary:	Tools to transform WordPerfect Documents into other formats
 Summary(pl):	Narzêdzia do przekszta³cania dokumentów WordPerfecta na inne formaty
 Group:		Applications/Publishing
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Tools to transform WordPerfect Documents (WPD) into other formats.
