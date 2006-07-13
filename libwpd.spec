@@ -2,7 +2,7 @@ Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
 Version:	0.8.5
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
@@ -10,13 +10,13 @@ Source0:	http://dl.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
 URL:		http://libwpd.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 2.0.0
-BuildRequires:	libgsf-devel >= 1.6.0
+BuildRequires:	glib2-devel >= 1:2.12.0
+BuildRequires:	libgsf-devel >= 1.14.1
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
-Requires:	glib2 >= 2.0.0
-Requires:	libgsf >= 1.6.0
+Requires:	glib2 >= 1:2.12.0
+Requires:	libgsf >= 1.14.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +30,8 @@ Summary:	Header files for libwpd library
 Summary(pl):	Pliki nag³ówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 2.0.0
-Requires:	libgsf-devel >= 1.6.0
+Requires:	glib2-devel >= 1:2.12.0
+Requires:	libgsf-devel >= 1.14.1
 Requires:	libstdc++-devel
 
 %description devel
@@ -75,6 +75,7 @@ formaty. Aktualnie obs³ugiwane s±: html, raw, text.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure \
 	--enable-static
 %{__make}
