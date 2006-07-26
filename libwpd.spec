@@ -7,7 +7,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
 # Source0-md5:	464a390c66511831821de81b887d3e61
-URL:		http://libwpd.sf.net/
+URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.12.0
