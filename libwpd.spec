@@ -10,13 +10,13 @@ Source0:	http://dl.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	libgsf-devel >= 1.14.1
+BuildRequires:	glib2-devel >= 1:2.10.3
+BuildRequires:	libgsf-devel >= 1.13.3
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
-Requires:	glib2 >= 1:2.12.0
-Requires:	libgsf >= 1.14.1
+Requires:	glib2 >= 1:2.10.3
+Requires:	libgsf >= 1.13.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +30,8 @@ Summary:	Header files for libwpd library
 Summary(pl):	Pliki nag³ówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.12.0
-Requires:	libgsf-devel >= 1.14.1
+Requires:	glib2-devel >= 1:2.10.3
+Requires:	libgsf-devel >= 1.13.3
 Requires:	libstdc++-devel
 
 %description devel
