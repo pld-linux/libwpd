@@ -1,5 +1,5 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
-Summary(pl):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
+Summary(pl.UTF-8):   Biblioteka do odczytu i konwersji dokumentÃ³w WordPerfecta(TM)
 Name:		libwpd
 Version:	0.8.8
 Release:	1
@@ -22,12 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Library that handles WordPerfect documents.
 
-%description -l pl
-Biblioteka obs³uguj±ca dokumenty WordPerfecta.
+%description -l pl.UTF-8
+Biblioteka obsÅ‚ugujÄ…ca dokumenty WordPerfecta.
 
 %package devel
 Summary:	Header files for libwpd library
-Summary(pl):	Pliki nag³ówkowe biblioteki libwpd
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.12.0
@@ -37,24 +37,24 @@ Requires:	libstdc++-devel
 %description devel
 Header files for libwpd library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libwpd.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libwpd.
 
 %package static
 Summary:	Static libwpd library
-Summary(pl):	Statyczna biblioteka libwpd
+Summary(pl.UTF-8):   Statyczna biblioteka libwpd
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libwpd library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libwpd.
 
 %package tools
 Summary:	Tools to transform WordPerfect Documents into other formats
-Summary(pl):	Narzêdzia do przekszta³cania dokumentów WordPerfecta na inne formaty
+Summary(pl.UTF-8):   NarzÄ™dzia do przeksztaÅ‚cania dokumentÃ³w WordPerfecta na inne formaty
 Group:		Applications/Publishing
 Requires:	%{name} = %{version}-%{release}
 
@@ -62,9 +62,9 @@ Requires:	%{name} = %{version}-%{release}
 Tools to transform WordPerfect Documents (WPD) into other formats.
 Currently supported: html, raw, text.
 
-%description tools -l pl
-Narzêdzia do przekszta³cania dokumentów WordPerfecta (WPD) na inne
-formaty. Aktualnie obs³ugiwane s±: html, raw, text.
+%description tools -l pl.UTF-8
+NarzÄ™dzia do przeksztaÅ‚cania dokumentÃ³w WordPerfecta (WPD) na inne
+formaty. Aktualnie obsÅ‚ugiwane sÄ…: html, raw, text.
 
 %prep
 %setup -q
