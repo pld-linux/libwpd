@@ -1,5 +1,5 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
-Summary(pl.UTF-8):   Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
+Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
 Version:	0.8.8
 Release:	1
@@ -27,7 +27,7 @@ Biblioteka obsługująca dokumenty WordPerfecta.
 
 %package devel
 Summary:	Header files for libwpd library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libwpd
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.12.0
@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki libwpd.
 
 %package static
 Summary:	Static libwpd library
-Summary(pl.UTF-8):   Statyczna biblioteka libwpd
+Summary(pl.UTF-8):	Statyczna biblioteka libwpd
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,7 +54,7 @@ Statyczna biblioteka libwpd.
 
 %package tools
 Summary:	Tools to transform WordPerfect Documents into other formats
-Summary(pl.UTF-8):   Narzędzia do przekształcania dokumentów WordPerfecta na inne formaty
+Summary(pl.UTF-8):	Narzędzia do przekształcania dokumentów WordPerfecta na inne formaty
 Group:		Applications/Publishing
 Requires:	%{name} = %{version}-%{release}
 
