@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
@@ -76,7 +80,8 @@ formaty. Aktualnie obsługiwane są: html, raw, text.
 %{__autoheader}
 %{__automake}
 %configure \
-	--enable-static
+	--enable-static \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -103,9 +108,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/libwpd*
 %{_pkgconfigdir}/*.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
 
 %files tools
 %defattr(644,root,root,755)
