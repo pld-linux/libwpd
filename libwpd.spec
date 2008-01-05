@@ -99,19 +99,26 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libwpd-0.8.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwpd-0.8.so.8
+%attr(755,root,root) %{_libdir}/libwpd-stream-0.8.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwpd-stream-0.8.so.8
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/libwpd*
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/libwpd-0.8.so
+%attr(755,root,root) %{_libdir}/libwpd-stream-0.8.so
+%{_libdir}/libwpd-0.8.la
+%{_libdir}/libwpd-stream-0.8.la
+%{_includedir}/libwpd-0.8
+%{_pkgconfigdir}/libwpd-0.8.pc
+%{_pkgconfigdir}/libwpd-stream-0.8.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libwpd-0.8.a
+%{_libdir}/libwpd-stream-0.8.a
 %endif
 
 %files tools
