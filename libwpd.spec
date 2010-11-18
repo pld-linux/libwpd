@@ -5,12 +5,12 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
-Version:	0.8.14
+Version:	0.9.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
-# Source0-md5:	64d66018897d759358f454010b6e75d2
+Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
+# Source0-md5:	a48717413de46ccca59df1b07ac70225
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -98,27 +98,27 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES TODO
-%attr(755,root,root) %{_libdir}/libwpd-0.8.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libwpd-0.8.so.8
-%attr(755,root,root) %{_libdir}/libwpd-stream-0.8.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libwpd-stream-0.8.so.8
+%doc TODO
+%attr(755,root,root) %{_libdir}/libwpd-0.9.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwpd-0.9.so.9
+%attr(755,root,root) %{_libdir}/libwpd-stream-0.9.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwpd-stream-0.9.so.9
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libwpd-0.8.so
-%attr(755,root,root) %{_libdir}/libwpd-stream-0.8.so
-%{_libdir}/libwpd-0.8.la
-%{_libdir}/libwpd-stream-0.8.la
-%{_includedir}/libwpd-0.8
-%{_pkgconfigdir}/libwpd-0.8.pc
-%{_pkgconfigdir}/libwpd-stream-0.8.pc
+%attr(755,root,root) %{_libdir}/libwpd-0.9.so
+%attr(755,root,root) %{_libdir}/libwpd-stream-0.9.so
+%{_libdir}/libwpd-0.9.la
+%{_libdir}/libwpd-stream-0.9.la
+%{_includedir}/libwpd-0.9
+%{_pkgconfigdir}/libwpd-0.9.pc
+%{_pkgconfigdir}/libwpd-stream-0.9.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libwpd-0.8.a
-%{_libdir}/libwpd-stream-0.8.a
+%{_libdir}/libwpd-0.9.a
+%{_libdir}/libwpd-stream-0.9.a
 %endif
 
 %files tools
