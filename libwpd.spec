@@ -12,15 +12,11 @@ Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
 # Source0-md5:	a48717413de46ccca59df1b07ac70225
 URL:		http://libwpd.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59c
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	libgsf-devel >= 1.14.1
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
-Requires:	glib2 >= 1:2.12.0
-Requires:	libgsf >= 1.14.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,8 +30,6 @@ Summary:	Header files for libwpd library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.12.0
-Requires:	libgsf-devel >= 1.14.1
 Requires:	libstdc++-devel
 
 %description devel
@@ -98,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc TODO
+%doc CREDITS ChangeLog NEWS TODO
 %attr(755,root,root) %{_libdir}/libwpd-0.9.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libwpd-0.9.so.9
 %attr(755,root,root) %{_libdir}/libwpd-stream-0.9.so.*.*.*
