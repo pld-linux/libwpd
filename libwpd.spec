@@ -5,12 +5,12 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
-Version:	0.9.1
+Version:	0.9.2
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
-# Source0-md5:	6edd1b7eb8992888c6c82fc95859ac1b
+# Source0-md5:	da43f18da732f6156cef145d06613960
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf >= 2.59c
 BuildRequires:	automake
