@@ -12,8 +12,8 @@ Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.gz
 # Source0-md5:	66368157450583f452d38a06990d5537
 URL:		http://libwpd.sourceforge.net/
-BuildRequires:	autoconf >= 2.59c
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.65
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
