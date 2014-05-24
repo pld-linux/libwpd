@@ -5,15 +5,17 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
-Version:	0.9.9
+Version:	0.10.0
 Release:	1
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
-# Source0-md5:	6b74a863c957563924546e16cc833591
+# Source0-md5:	f7abb9b3ea96faf02ae019af68b1f07c
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
+BuildRequires:	doxygen
+BuildRequires:	librevenge-devel >= 0.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
@@ -33,6 +35,7 @@ Summary:	Header files for libwpd library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	librevenge-devel >= 0.0
 Requires:	libstdc++-devel
 
 %description devel
@@ -52,6 +55,17 @@ Static libwpd library.
 
 %description static -l pl.UTF-8
 Statyczna biblioteka libwpd.
+
+%package apidocs
+Summary:	API documentation for libwpd library
+Summary(pl.UTF-8):	Dokumentacja API biblioteki libwpd
+Group:		Documentation
+
+%description apidocs
+API documentation for libwpd library.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki libwpd.
 
 %package tools
 Summary:	Tools to transform WordPerfect Documents into other formats
@@ -98,27 +112,28 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CREDITS ChangeLog NEWS TODO
-%attr(755,root,root) %{_libdir}/libwpd-0.9.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libwpd-0.9.so.9
-%attr(755,root,root) %{_libdir}/libwpd-stream-0.9.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libwpd-stream-0.9.so.9
+%doc CREDITS ChangeLog NEWS README TODO
+%attr(755,root,root) %{_libdir}/libwpd-0.10.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwpd-0.10.so.10
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libwpd-0.9.so
-%attr(755,root,root) %{_libdir}/libwpd-stream-0.9.so
-%{_includedir}/libwpd-0.9
-%{_pkgconfigdir}/libwpd-0.9.pc
-%{_pkgconfigdir}/libwpd-stream-0.9.pc
+%attr(755,root,root) %{_libdir}/libwpd-0.10.so
+%{_includedir}/libwpd-0.10
+%{_pkgconfigdir}/libwpd-0.10.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libwpd-0.9.a
-%{_libdir}/libwpd-stream-0.9.a
+%{_libdir}/libwpd-0.10.a
 %endif
+
+%files apidocs
+%defattr(644,root,root,755)
+%doc docs/doxygen/html/*
 
 %files tools
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/wpd2*
+%attr(755,root,root) %{_bindir}/wpd2html
+%attr(755,root,root) %{_bindir}/wpd2raw
+%attr(755,root,root) %{_bindir}/wpd2text
