@@ -5,23 +5,24 @@
 Summary:	Library for reading and converting WordPerfect(TM) documents
 Summary(pl.UTF-8):	Biblioteka do odczytu i konwersji dokumentów WordPerfecta(TM)
 Name:		libwpd
-Version:	0.10.0
-Release:	3
+Version:	0.10.1
+Release:	1
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
-# Source0-md5:	f7abb9b3ea96faf02ae019af68b1f07c
+# Source0-md5:	2e98574901f8019a239947c1d8c34b69
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	doxygen
-BuildRequires:	librevenge-devel >= 0.0
+BuildRequires:	librevenge-devel >= 0.0.1
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	zlib-devel
+Requires:	librevenge >= 0.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +36,7 @@ Summary:	Header files for libwpd library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	librevenge-devel >= 0.0
+Requires:	librevenge-devel >= 0.0.1
 Requires:	libstdc++-devel
 
 %description devel
