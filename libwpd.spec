@@ -14,9 +14,10 @@ Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
 URL:		http://libwpd.sourceforge.net/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
+BuildRequires:	boost-devel
 BuildRequires:	doxygen
 BuildRequires:	librevenge-devel >= 0.0.1
-BuildRequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
@@ -37,7 +38,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libwpd
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	librevenge-devel >= 0.0.1
-Requires:	libstdc++-devel
+Requires:	libstdc++-devel >= 6:4.7
 
 %description devel
 Header files for libwpd library.
