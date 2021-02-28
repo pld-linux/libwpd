@@ -63,9 +63,7 @@ Statyczna biblioteka libwpd.
 Summary:	API documentation for libwpd library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libwpd
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for libwpd library.
